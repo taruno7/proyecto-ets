@@ -1,3 +1,4 @@
+
 package proyecto.ets;
 
 import java.util.Scanner;
@@ -10,6 +11,7 @@ public class ProyectoEts {
     public static void main(String[] args) {
         System.out.println("Escribe el primer numero: " );
         double num1=input.nextDouble();
+
         
         System.out.println("Escribe un operador: ");
   
@@ -20,9 +22,9 @@ public class ProyectoEts {
         System.out.println("Escribe el segundo numero: " );
         double num2=input.nextDouble();
         ProyectoEts.operacion(op, num1, num2);
-        
     }
     public static void operacion(String op, double num1,double num2){
+
         switch(op){
             case "sumar":{double suma= num1+num2;
             System.out.println("La suma es: " +suma);}
@@ -41,3 +43,4 @@ public class ProyectoEts {
         }
     }
 }
+
