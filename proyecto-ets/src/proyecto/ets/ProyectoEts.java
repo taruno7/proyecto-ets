@@ -1,20 +1,20 @@
-
 package proyecto.ets;
+ 
 
 import java.util.Scanner;
 
-
-public class ProyectoEts {
+ public class ProyectoEts {
         static Scanner input=new Scanner(System.in);
 
+ 
 
-    public static void main(String[] args) {
+     public static void main(String[] args) {
+        // TODO code application logic here
         System.out.println("Escribe el primer numero: " );
         double num1=input.nextDouble();
 
-        
-        System.out.println("Escribe un operador: ");
-  
+       System.out.println("Escribe un operador: ");
+
         //Espacio en blanco por el error nextLine() después de un nextDouble()
         input.nextLine();
         String op=input.nextLine();
@@ -22,25 +22,29 @@ public class ProyectoEts {
         System.out.println("Escribe el segundo numero: " );
         double num2=input.nextDouble();
         ProyectoEts.operacion(op, num1, num2);
+
     }
     public static void operacion(String op, double num1,double num2){
-
-        switch(op){
-            case "sumar":{double suma= num1+num2;
-            System.out.println("La suma es: " +suma);}
-            break;
-            case "restar":{double restar= num1-num2;
-            System.out.println("La resta es: " +restar);}
-            break;
-            case "multiplicar":{double multi= num1*num2;
-            System.out.println("La multiplicación es: " +multi);}
-            break;
-            case "dividir":{double div= num1/num2;
-            System.out.println("La suma es: " +div);}
-            break;
-            default:System.out.println("ERROR! NO HAS ESCRITO UNA OPERACIÓN VALIDA");
-            break;
+        if ("sumar".equals(op)) {
+            double suma= num1+num2;
+            System.out.println("La suma es: " +suma);
         }
-    }
-}
+        if ("restar".equals(op)) {
+            double restar= num1-num2;
+            System.out.println("La suma es: " +restar);
+        }
+        if ("multiplicar".equals(op)) {
+            double multiplicar= num1*num2;
+            System.out.println("La suma es: " +multiplicar);
+        }
+        if ("diivir".equals(op)) {
+           double dividir= num1/num2;
+        System.out.println("La suma es: " +dividir);
+        }
+       else{
+           System.out.println("ERROR! NO HAS ESCRITO UNA OPERACIÓN VALIDA");
+        }
+     }
+  
+ }
 
